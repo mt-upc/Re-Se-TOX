@@ -34,8 +34,6 @@ python run.py
 
 Here are the details about the main arguments:
 
-###### Hyper-parameters
-
 
 | Hyper-parameter   | Description                                                  |
 | ----------------- | :----------------------------------------------------------- |
