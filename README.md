@@ -12,6 +12,8 @@ Our proposed method, ReSeTOX (REdo SEarch if TOXic), addresses the issue of Neur
 
 ## Results
 
+![](images_readme/table_results.png)
+
 ## Usage
 
 To run ReSeTOX given a text you wish to translate:
