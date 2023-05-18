@@ -20,7 +20,7 @@ To run ReSeTOX given a text you wish to translate:
 python run.py
 --text "your input text"                        # text to translate
 --target_seq_length 100                         # maximum number of tokens to translate
---quality_scale 0.7                             # alpha parameter
+--quality_scale 0.7                             # alpha hyper-parameter
 --stepsize 0.7                                  # step size of the gradient descent update
 --top_size 10                                   # number of tokens used to compute the mitigation loss
 --attention_change "self_attention_decoder"
