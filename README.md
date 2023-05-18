@@ -23,15 +23,30 @@ python run.py
 --quality_scale 0.7                             # alpha hyper-parameter
 --stepsize 0.7                                  # step size of the gradient descent update
 --top_size 10                                   # number of tokens used to compute the mitigation loss
---attention_change "self_attention_decoder"
---src_lang "eng_Latn"
---tgt_lang "spa_Latn"
---unmodified False
---update_when_toxic True
---toxicity_method "ETOX"
---beam_size 4
+--attention_change "self_attention_decoder"     # type of attention to update
+--src_lang "eng_Latn"                           # source language
+--tgt_lang "spa_Latn"                           # target language
+--unmodified False                              # turn off resetox
+--update_when_toxic True                        # conditional update
+--toxicity_method "ETOX"                        # toxic classifier to use
+--beam_size 4                                   # size of the beam in the beam search
 ```
 
+Here are the details about the main arguments:
+
+###### Hyper-parameters
+
+
+| Hyper-parameter   | Description                                                  |
+| ----------------- | :----------------------------------------------------------- |
+| **quality_scale** | In the paper is referred as alpha. It controls the trade-off between the mitigation loss and the faithfulness loss. A higher alpha would give more importance to the mitigation loss. |
+| **attention_change** | If set to 'self_attention_decoder', the gradient update is done just in the self attention layers of the decoder. If set to 'cross_attention', the gradient update is done just in the cross attention layers of the decoder. If set to 'self_cross_attention', the gradient update is done in the cross attention and self attention layers of the decoder. |
+| **src_lang** | Source language code in BCP-47 code format. Check [here](https://github.com/facebookresearch/flores/blob/main/flores200/README.md#languages-in-flores-200) for the list of all BCP-47 in the Flores 200 dataset. |
+| **tgt_lang** | Targwt language code in BCP-47 code format. |
+| **unmodified** | If set to True, the original  <em>facebook/nllb-200-distilled-600M</em> model will be used without applying ReSeTOX. |
+| **update_when_toxic** | In the paper referred as conditional update. It applies the gradient step if it detects a toxic token. |
+| **toxicity_method** | If set to 'ETOX', ETOX is used as the toxic classifier. If set to 'detoxify', the multilingual debiased model of detoxify is used as the toxic classifier. Detoxify returns a toxic score, a threshold of 0.5 is used to classify as toxic or non toxic. |
+ 
 ## Citation
 
 If you want to cite this repository in your work, please consider citing:
