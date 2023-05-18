@@ -1,6 +1,6 @@
 # ReSeTOX: Re-learning attention weights for toxicity mitigation in machine translation
 
-This repository contains the code of <em>ReSeTOX: Re-learning attention weights for toxicity mitigation in machine translation</em>.
+This repository contains the code of <em>ReSeTOX: Re-learning attention weights for toxicity mitigation in machine translation</em> which is based on the original implementation from: [ZeroCap: Zero-Shot Image-to-Text Generation for Visual-Semantic Arithmetic](https://github.com/YoadTew/zero-shot-image-to-text).
 
 ## Abstract
 
