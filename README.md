@@ -40,9 +40,9 @@ Here are the details about the main arguments:
 | **quality_scale** | In the paper is referred as alpha. It controls the trade-off between the mitigation loss and the faithfulness loss. A higher alpha would give more importance to the mitigation loss. |
 | **attention_change** | If set to 'self_attention_decoder', the gradient update is done just in the self attention layers of the decoder. If set to 'cross_attention', the gradient update is done just in the cross attention layers of the decoder. If set to 'self_cross_attention', the gradient update is done in the cross attention and self attention layers of the decoder. |
 | **src_lang** | Source language code in BCP-47 code format. Check [here](https://github.com/facebookresearch/flores/blob/main/flores200/README.md#languages-in-flores-200) for the list of all BCP-47 in the Flores 200 dataset. |
-| **tgt_lang** | Targwt language code in BCP-47 code format. |
+| **tgt_lang** | Target language code in BCP-47 code format. |
 | **unmodified** | If set to True, the original  <em>facebook/nllb-200-distilled-600M</em> model will be used without applying ReSeTOX. |
-| **update_when_toxic** | In the paper referred as conditional update. It applies the gradient step if it detects a toxic token. |
+| **update_when_toxic** | In the paper referred as conditional update. If set to True, it applies the gradient step if it detects a toxic token. |
 | **toxicity_method** | If set to 'ETOX', ETOX is used as the toxic classifier. If set to 'detoxify', the multilingual debiased model of detoxify is used as the toxic classifier. Detoxify returns a toxic score, a threshold of 0.5 is used to classify as toxic or non toxic. |
  
 ## Citation
