@@ -1,4 +1,4 @@
-# ReSeTOX: Re-learning attention weights for toxicity mitigation in machine translation
+# ReSeTOX: [Re-learning attention weights for toxicity mitigation in machine translation](https://arxiv.org/abs/2305.11761)
 
 This repository contains the code of <em>ReSeTOX: Re-learning attention weights for toxicity mitigation in machine translation</em> which is based on the original implementation from: [ZeroCap: Zero-Shot Image-to-Text Generation for Visual-Semantic Arithmetic](https://github.com/YoadTew/zero-shot-image-to-text).
 
@@ -52,5 +52,12 @@ Here are the details about the main arguments:
 If you want to cite this repository in your work, please consider citing:
 
 ```
-
+@misc{gilabert2023resetox,
+      title={ReSeTOX: Re-learning attention weights for toxicity mitigation in machine translation}, 
+      author={Javier García Gilabert and Carlos Escolano and Marta R. Costa-Jussà},
+      year={2023},
+      eprint={2305.11761},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
